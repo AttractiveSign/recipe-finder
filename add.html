@@ -2,10 +2,12 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Neues Rezept erstellen</title>
+    <title>Add New Recipe</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-8 min-h-screen">
+<body class="bg-gray-100 p-8 min-h-screen flex flex-col">
+
+<main class="flex-grow">
 
     <div class="max-w-2xl mx-auto mb-6">
         <a href="index.html" class="text-gray-500 hover:text-orange-600 flex items-center gap-2 transition font-medium">
@@ -24,7 +26,8 @@
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-700">Kategorie</label>
-                    <input type="text" id="category" class="w-full p-2 border rounded mt-1" placeholder="z.B. Frühstück">
+                    <input type="text" id="category" class="w-full p-2 border rounded mt-1"
+                           placeholder="z.B. Frühstück">
                 </div>
             </div>
 
@@ -37,20 +40,25 @@
                 <label class="block text-sm font-medium text-gray-700 mb-2">Zutaten</label>
                 <div id="ingredientsList" class="space-y-2">
                     <div class="flex gap-2">
-                        <input type="text" placeholder="Menge (z.B. 200g)" class="amount-input w-1/3 p-2 border rounded">
+                        <input type="text" placeholder="Menge (z.B. 200g)"
+                               class="amount-input w-1/3 p-2 border rounded">
                         <input type="text" placeholder="Zutat (z.B. Mehl)" class="item-input w-2/3 p-2 border rounded">
                     </div>
                 </div>
-                <button type="button" onclick="addIngredientRow()" class="mt-2 text-sm text-orange-600 font-bold hover:underline">+ Weitere Zutat</button>
+                <button type="button" onclick="addIngredientRow()"
+                        class="mt-2 text-sm text-orange-600 font-bold hover:underline">+ Weitere Zutat
+                </button>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-700">Anleitung</label>
-                <textarea id="instructions" rows="4" class="w-full p-2 border rounded mt-1" placeholder="Schritt 1..."></textarea>
+                <textarea id="instructions" rows="4" class="w-full p-2 border rounded mt-1"
+                          placeholder="Schritt 1..."></textarea>
             </div>
 
             <div class="pt-4 border-t">
-                <button type="button" onclick="generateJSON()" class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition">
+                <button type="button" onclick="generateJSON()"
+                        class="w-full bg-orange-600 text-white font-bold py-3 rounded-lg hover:bg-orange-700 transition">
                     JSON Generieren
                 </button>
             </div>
@@ -59,7 +67,10 @@
         <div id="outputArea" class="hidden mt-8 bg-gray-800 p-4 rounded-lg relative">
             <h3 class="text-gray-400 text-xs uppercase font-bold mb-2">Kopiere diesen Block in deine recipes.json:</h3>
             <pre id="jsonOutput" class="text-green-400 font-mono text-sm overflow-x-auto whitespace-pre-wrap"></pre>
-            <button onclick="copyToClipboard()" class="absolute top-4 right-4 bg-gray-600 text-white text-xs px-2 py-1 rounded hover:bg-gray-500">Kopieren</button>
+            <button onclick="copyToClipboard()"
+                    class="absolute top-4 right-4 bg-gray-600 text-white text-xs px-2 py-1 rounded hover:bg-gray-500">
+                Kopieren
+            </button>
         </div>
     </div>
 
@@ -79,15 +90,15 @@
         // Funktion: JSON erstellen
         function generateJSON() {
             // ID generieren (Zufallszahl + Datum damit es einzigartig bleibt)
-            const id = Date.now(); 
+            const id = Date.now();
 
             // Zutaten einsammeln
             const amounts = document.querySelectorAll('.amount-input');
             const items = document.querySelectorAll('.item-input');
             const ingredients = [];
 
-            for(let i=0; i<amounts.length; i++) {
-                if(items[i].value) { // Nur wenn Zutat ausgefüllt ist
+            for (let i = 0; i < amounts.length; i++) {
+                if (items[i].value) { // Nur wenn Zutat ausgefüllt ist
                     ingredients.push({
                         item: items[i].value,
                         amount: amounts[i].value
@@ -118,5 +129,11 @@
             alert("Kopiert! Füge es jetzt unten in deine recipes.json ein.");
         }
     </script>
+</main>
+<footer class="bg-white border-t border-gray-200 py-6">
+    <div class="max-w-4xl mx-auto px-5 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Jannis Naeve. Built with HTML & JS.</p>
+    </div>
+</footer>
 </body>
 </html>

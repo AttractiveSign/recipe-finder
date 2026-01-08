@@ -13,12 +13,12 @@ fetch('recipes.json')
 // 2. Such-Logik
 document.getElementById('searchInput').addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
-    
+
     const filtered = allRecipes.filter(recipe => {
-        return recipe.name.toLowerCase().includes(searchTerm) || 
-               recipe.ingredients.some(z => z.item.toLowerCase().includes(searchTerm));
+        return recipe.name.toLowerCase().includes(searchTerm) ||
+            recipe.ingredients.some(z => z.item.toLowerCase().includes(searchTerm));
     });
-    
+
     displayRecipes(filtered);
 });
 
@@ -26,7 +26,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 // 3. Funktion um Rezepte anzuzeigen (Die "Gute" Version mit Klick-Event)
 function displayRecipes(recipes) {
     const grid = document.getElementById('recipeGrid');
-    grid.innerHTML = ''; 
+    grid.innerHTML = '';
 
     if (recipes.length === 0) {
         grid.innerHTML = '<p class="text-gray-500">Keine Rezepte gefunden.</p>';
@@ -49,7 +49,7 @@ function displayRecipes(recipes) {
                 </div>
             </div>
         `;
-        
+
         // Ins Grid einfügen
         grid.insertAdjacentHTML('beforeend', cardHTML);
     });
@@ -75,12 +75,12 @@ function openModal(recipe) {
     const content = document.getElementById('modalContent');
 
     // Sicherheitscheck, falls Felder in JSON fehlen
-    const ingredientsHTML = recipe.ingredients 
+    const ingredientsHTML = recipe.ingredients
         ? recipe.ingredients.map(z => `
             <li class="mb-1">
                 <span class="font-bold text-orange-600">${z.amount || ''}</span> 
                 ${z.item}
-            </li>`).join('') 
+            </li>`).join('')
         : '<li>Keine Zutaten angegeben</li>';
 
     content.innerHTML = `
@@ -97,7 +97,7 @@ function openModal(recipe) {
         </div>
     `;
 
-    modal.classList.remove('hidden'); 
+    modal.classList.remove('hidden');
 }
 
 function closeModal() {
