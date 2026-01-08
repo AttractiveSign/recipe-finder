@@ -16,7 +16,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     
     const filtered = allRecipes.filter(recipe => {
         return recipe.name.toLowerCase().includes(searchTerm) || 
-               recipe.ingredients.some(z => z.toLowerCase().includes(searchTerm));
+               recipe.ingredients.some(z => z.item.toLowerCase().includes(searchTerm));
     });
     
     displayRecipes(filtered);
@@ -41,7 +41,7 @@ function displayRecipes(recipes) {
                 <span class="text-xs font-bold text-orange-500 uppercase">${recipe.category}</span>
                 <h2 class="text-xl font-bold mb-2">${recipe.name}</h2>
                  <div class="flex flex-wrap gap-1">
-                 ${recipe.ingredients.map(z => `<span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">${z}</span>`).join('')} 
+                 ${recipe.ingredients.map(z => `<span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">${z.item}</span>`).join('')} 
                  </div>
                 <div class="flex justify-between items-center text-sm text-gray-500">
                     <span>⏱ ${recipe.duration}</span>
@@ -76,7 +76,11 @@ function openModal(recipe) {
 
     // Sicherheitscheck, falls Felder in JSON fehlen
     const ingredientsHTML = recipe.ingredients 
-        ? recipe.ingredients.map(z => `<li>${z}</li>`).join('') 
+        ? recipe.ingredients.map(z => `
+            <li class="mb-1">
+                <span class="font-bold text-orange-600">${z.amount || ''}</span> 
+                ${z.item}
+            </li>`).join('') 
         : '<li>Keine Zutaten angegeben</li>';
 
     content.innerHTML = `
