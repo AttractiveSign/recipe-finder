@@ -6,16 +6,22 @@
     <title>Meine Rezept-DB</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<header class="text-center mb-10 relative">
+    <div class="absolute top-0 right-0">
+        <a href="add.html" class="flex items-center gap-2 bg-white text-orange-600 border border-orange-600 px-4 py-2 rounded-lg font-bold hover:bg-orange-50 transition shadow-sm">
+            <span>➕</span> Rezept hinzufügen
+        </a>
+    </div>
+
+    <h1 class="text-4xl font-extrabold text-orange-600">🍲 Rezept-Finder</h1>
+    <p class="text-gray-600 mt-2"></p>
+</header>
 <body class="bg-gray-50 min-h-screen p-5">
 
     <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-10">
-            <h1 class="text-4xl font-extrabold text-orange-600">🍲 Rezept-Finder</h1>
-            <p class="text-gray-600 mt-2">Suche nach Zutaten (z.B. "Nudeln")</p>
-        </header>
 
         <div class="mb-8">
-            <input type="text" id="searchInput" placeholder="Zutat eingeben..." 
+            <input type="text" id="searchInput" placeholder="Nach Zutat oder Namen filtern..." 
                    class="w-full p-4 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-orange-500 outline-none">
         </div>
 
