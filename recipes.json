@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Klassische Carbonara",
+    "ingredients": ["Nudeln", "Ei", "Speck", "Parmesan"],
+    "duration": "20 Min",
+    "category": "Kochen",
+    "instructions": "Do some stuff"
+  },
+  {
+    "id": 2,
+    "name": "Tomatensalat",
+    "ingredients": ["Tomaten", "Zwiebeln", "Olivenöl"],
+    "duration": "10 Min",
+    "category": "Salat",
+    "instructions": "Do some stuff"
+  },
+  {
+    "id": 3,
+    "name": "Pesto Pasta",
+    "ingredients": ["Nudeln", "Basilikum", "Pinienkerne", "Olivenöl"],
+    "duration": "15 Min",
+    "category": "Kochen",
+    "instructions": "Do some stuff"
+  }
+]

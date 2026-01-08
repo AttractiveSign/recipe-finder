@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Rezept-DB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-5">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-orange-600">🍲 Rezept-Finder</h1>
+            <p class="text-gray-600 mt-2">Suche nach Zutaten (z.B. "Nudeln")</p>
+        </header>
+
+        <div class="mb-8">
+            <input type="text" id="searchInput" placeholder="Zutat eingeben..." 
+                   class="w-full p-4 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-orange-500 outline-none">
+        </div>
+
+        <div id="recipeGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <p class="text-gray-400">Rezepte werden geladen...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="recipeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl">&times;</button>
+        <div id="modalContent">
+            </div>
+    </div>
+</div>
+</body>
+</html>
