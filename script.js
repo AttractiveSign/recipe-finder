@@ -16,7 +16,8 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
     const filtered = allRecipes.filter(recipe => {
         return recipe.name.toLowerCase().includes(searchTerm) ||
-            recipe.ingredients.some(z => z.item.toLowerCase().includes(searchTerm));
+            recipe.ingredients.some(z => z.item.toLowerCase().includes(searchTerm)) ||
+            recipe.category.toLowerCase().includes(searchTerm);
     });
 
     displayRecipes(filtered);
