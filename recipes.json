@@ -34,5 +34,155 @@
     "duration": "15 Min",
     "category": "Kochen",
     "instructions": "Do some stuff"
-  }
+  },
+  {
+  "id": 1769863489572,
+  "name": "Schokokuchen",
+  "category": "Backen",
+  "duration": "10 Min",
+  "ingredients": [
+    {
+      "item": "Mehl",
+      "amount": "200g"
+    },
+    {
+      "item": "Backkakao",
+      "amount": "35g"
+    },
+    {
+      "item": "Zucker",
+      "amount": "160g"
+    },
+    {
+      "item": "Vanillezucker",
+      "amount": "1 Pk"
+    },
+    {
+      "item": "Wasser",
+      "amount": "240ml"
+    },
+    {
+      "item": "Sonnenblumenöl",
+      "amount": "100ml"
+    }
+  ],
+  "instructions": "Den Backofen auf 180°C Ober-/Unteritze vorheizen.\n\nTrockene Zutaten vermischen, dann Wasser und Öl hinzugeben und glatt rühren.\nJe nach Vorliebe kann auch eine Banane dazugegeben werden, diese dann vor den trockenen Zutaten mit einer Gabel zerdrücken.\n\nTeig in eine mit Backpapier ausgelegte oder mit Öl eingefettete Form geben und ca 35-40 Minuten backen."
+}
+,{
+  "id": 1769863937050,
+  "name": "Thai-Curry Glasnudelsuppe",
+  "category": "Suppe",
+  "duration": "30 Min",
+  "ingredients": [
+    {
+      "item": "Pak Choi",
+      "amount": "2"
+    },
+    {
+      "item": "Knoblauch",
+      "amount": ""
+    },
+    {
+      "item": "Koriander",
+      "amount": ""
+    },
+    {
+      "item": "Süßkartoffel",
+      "amount": "1"
+    },
+    {
+      "item": "Zwiebel",
+      "amount": "1"
+    },
+    {
+      "item": "Ingwer",
+      "amount": ""
+    },
+    {
+      "item": "Currypaste",
+      "amount": "2 EL"
+    },
+    {
+      "item": "Gemüsebrühe",
+      "amount": "800 ml"
+    },
+    {
+      "item": "Glasnudeln",
+      "amount": "100g"
+    },
+    {
+      "item": "Kokosmilch",
+      "amount": "400 ml"
+    },
+    {
+      "item": "Sojasauce",
+      "amount": ""
+    }
+  ],
+  "instructions": "Pak Choi in Streifen schneiden und Weißes und Grünes voneinander trennen. Süßkartoffel würfeln und Zwiebel klein schneiden.\n\nKnoblauch, Ingwer und Zwiebeln in großem Topf andünsten, Curry-Paste hinzugeben und anschwitzen, mit der Gemüsebrühe ablöschen. \nSüßkartoffelwürfel und den weißen Teil vom Pak Choi dazugeben und ca 5 Minuten Köcheln lassen.\nKokosmilch dazugeben und gut verrühren, dann den grünen Teil vom Pak Choi und die Glasnudeln dazugeben, für 3-5 Minuten köcheln lassen, abschmecken mit Sojasauce und Gewürzen und fertig.\n\nVarationen: Schmeckt auch sehr gut mit normalen Kartoffeln statt Süßkartoffel, auch gerne gewürfelten Tofu hinzugeben (Gleichzeitig mit weißem Teil vom Pak Choi)."
+},{
+  "id": 1769864338340,
+  "name": "Schnelle Nudel-Pesto-Pfanne",
+  "category": "Schnell",
+  "duration": "15 Min",
+  "ingredients": [
+    {
+      "item": "(Räucher-)Tofu",
+      "amount": "1 Block"
+    },
+    {
+      "item": "Pesto",
+      "amount": "1 Glas"
+    },
+    {
+      "item": "Kochsahne",
+      "amount": "200 ml"
+    },
+    {
+      "item": "Mais",
+      "amount": "1/2 Dose"
+    },
+    {
+      "item": "Paprika",
+      "amount": "1"
+    },
+    {
+      "item": "Nudeln",
+      "amount": "250 g"
+    },
+    {
+      "item": "Zwiebel",
+      "amount": "1"
+    }
+  ],
+  "instructions": "Nach Belieben auch gerne mehr oder anderes Gemüse.\n\nNudeln in gut gesalzenem Wasser aufsetzen.\nTofu würfeln und Gemüse klein schneiden.\n\nZwiebel in einer Pfanne andünsten und Tofu dazu, leicht anbraten.\nRestliches Gemüse dazugeben, für einige Minuten braten.\nMit Kochsahne ablöschen, dann das Pesto dazugeben, gut verrühren.\n\nWenn die Nudeln fertig sind, ein bisschen Nudelwasser in die Pfanne geben (ca 100 ml) und die Nudeln abgießen, dann alles miteinander verrühren."
+},{
+  "id": 1769864591250,
+  "name": "Nudeln mit Würstchen",
+  "category": "Schnell",
+  "duration": "15 Min",
+  "ingredients": [
+    {
+      "item": "Wurst",
+      "amount": "200 g"
+    },
+    {
+      "item": "Nudeln",
+      "amount": "250 g"
+    },
+    {
+      "item": "Zwiebel",
+      "amount": "1"
+    },
+    {
+      "item": "Mais",
+      "amount": "1/2 Dose"
+    },
+    {
+      "item": "Tomatenketchup",
+      "amount": ""
+    }
+  ],
+  "instructions": "Klingt komisch, ist aber super lecker.\nNudeln aufsetzen.\nDie Wurst in kleine Stücke schneiden (z.b. halbierte scheiben)\nIn einer Pfanne Zwiebeln andünsten und dann die Wurst dazu, für einige Minuten anbraten bis die Wurst schön braun ist. Dann den Mais dazu und noch ein bisschen anbraten.\nNudeln abgießen und alles vermischen.\nAbschmecken mit Tomatenketchup (Am besten erst auf dem Teller, sonst wird es komisch bei ggf. wiederaufwärmen)\n\nTipp: Ich mag die Bratwurst von Vemondo oder Rewe Beste Wahl am liebsten"
+}
 ]
